@@ -22,10 +22,10 @@ const meta: Meta = {
         },
         text: { control: 'text' }
     }
-}
+};
 export default meta;
 
-export const Default = (args: IButtonProps) => <Button {...args} />;
+export const Default: StoryObj<IButtonProps> = (args: IButtonProps) => <Button {...args} />;
 Default.args = {
     text: 'Button',
     size: 'sm',
