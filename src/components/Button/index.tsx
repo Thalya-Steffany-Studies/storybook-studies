@@ -13,6 +13,14 @@ enum ButtonSize {
     lg = 'w-75 p-3'
 }
 
-export function Button({ variant = 'danger', size = 'sm', text, ...rest }: IButtonProps) {
-    return <button className={`btn ${ButtonVariants[variant]}  ${ButtonSize[size]}`} {...rest}>{text}</button>
+export function Button({ variant = 'primary', size = 'md' , text, onClickFunc, ...rest }: IButtonProps) {
+    return (
+        <button 
+            className={`btn ${ButtonVariants[variant]}  ${ButtonSize[size]}`} 
+            {...rest} 
+            onClick={onClickFunc}
+        >
+         {text}
+        </button>
+    )
 }
