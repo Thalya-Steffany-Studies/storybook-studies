@@ -11,23 +11,24 @@ const meta: Meta = {
                 type: 'select',
                 options: ['primary' , 'danger' , 'warning' , 'success']
             },
-            defaultValue: 'primary'
+            table: { defaultValue: { summary: 'primary' } },
         },
         size: {
             control: {
                 type: 'radio',
                 options: ['sm' , 'md' , 'lg']
             },
-            defaultValue: 'sm'
+            table: { defaultValue: { summary: 'sm' } }
         },
-        text: { control: 'text' }
+        text: { control: 'text' },
     }
 };
 export default meta;
 
 export const Default: StoryObj<IButtonProps> = (args: IButtonProps) => <Button {...args} />;
+
 Default.args = {
     text: 'Button',
     size: 'sm',
-    variant: 'primary'
+    variant: 'primary',
 }
